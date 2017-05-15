@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="__PUBLIC__/Admin/css/reset.css" />
+	<link rel="stylesheet" href="__PUBLIC__/Admin/css/login.css" />
+</head>
+<body>
+<div class="page">
+	<div class="loginwarrp">
+		<div class="logo">管理员登陆</div>
+        <div class="login_form">
+			<form  method="post" action="{:U('Login/login')}">
+				<li class="login-item">
+					<span>用户名：</span>
+					<input type="text" name="name" class="login_input">
+				</li>
+				<li class="login-item">
+					<span>密　码：</span>
+					<input type="password" name="pass" class="login_input">
+				</li>
+				<li class="login-item verify">
+					<span>验证码：</span>
+					<input type="text" name="code" class="login_input verify_input">
+				</li>
+				<!-- <img src="images/verify.png" border="0" class="verifyimg" /> -->
+				<!-- <div class="clearfix"></div> -->
+				<img src="{:U('Login/code')}" style="position:absolute;margin:7px 10px;" onclick="this.src='{:U('Login/code')}' + '?' + Math.random() ">
+				<div style="clear:both;"></div>
+				<li class="login-sub">
+					<!-- <button name="Submit">登录</button> -->
+					<input type="submit" name="" value="登录" />
+				</li>                      
+           </form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
